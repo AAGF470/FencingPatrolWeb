@@ -85,28 +85,28 @@ function Footer() {
   return (
     <footer className="fp-footer">
       <div className="fp-footer__inner">
-        <div>
-          <div className="fp-footer__brand">{BRAND.a}<span>{BRAND.b}</span></div>
-          <p className="fp-footer__tagline">
-            A family-owned general remodeling contractor serving {AREA}. Fencing,
-            roofing, paving &amp; driveways — plus siding, and plumbing or
-            landscaping on request. We speak English and Spanish.
-          </p>
-          <p className="fp-footer__insured" style={{ marginTop: '14px' }}>
-            ● Family-owned · Fully insured · Registered LLC
-          </p>
+        <div className="fp-footer__top">
+          <div className="fp-footer__brand-col">
+            <div className="fp-footer__brand">{BRAND.a}<span>{BRAND.b}</span></div>
+            <p className="fp-footer__tagline">
+              A family-owned general remodeling contractor serving {AREA}. Fencing,
+              roofing, paving &amp; driveways — plus siding, and plumbing or
+              landscaping on request. We speak English and Spanish.
+            </p>
+            <p className="fp-footer__insured" style={{ marginTop: '14px' }}>
+              ● Family-owned · Fully insured · Registered LLC
+            </p>
+          </div>
+          <div className="fp-footer__contact">
+            <span className="fp-footer__contact-label">Call for a free estimate</span>
+            <a href={`tel:${PHONE_TEL}`} className="fp-footer__phone">{PHONE_DISPLAY}</a>
+            <span className="fp-footer__contact-note">We speak English &amp; Spanish · Find us on Yelp &amp; Angie's List</span>
+          </div>
         </div>
-        <div className="fp-footer__contact">
-          <span style={{ fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
-            Call for a free estimate
-          </span>
-          <a href={`tel:${PHONE_TEL}`} className="fp-footer__phone">{PHONE_DISPLAY}</a>
-          <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>We speak English &amp; Spanish · Find us on Yelp &amp; Angie's List</span>
+        <div className="fp-footer__bottom">
+          <span>© {new Date().getFullYear()} {BRAND.full}. All rights reserved.</span>
+          <span>Site by <a href="https://guillen.studio" target="_blank" rel="noopener noreferrer">Guillen Solutions</a></span>
         </div>
-      </div>
-      <div className="fp-footer__bottom">
-        <span>© {new Date().getFullYear()} {BRAND.full}. All rights reserved.</span>
-        <span>Site by <a href="https://guillen.studio" target="_blank" rel="noopener noreferrer">Guillen Solutions</a></span>
       </div>
     </footer>
   )

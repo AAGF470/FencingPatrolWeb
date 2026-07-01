@@ -156,6 +156,15 @@
 
 .fp-footer__phone:hover { color: var(--color-accent); }
 
+.fp-footer__contact-label {
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+.fp-footer__contact-note {
+  font-size: 13px; line-height: 1.5; color: rgba(255, 255, 255, 0.5);
+  max-width: 300px;
+}
+
 .fp-footer__insured {
   display: inline-flex;
   align-items: center;
