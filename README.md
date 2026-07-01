@@ -13,7 +13,7 @@ component library **`@aagf470/ui`**.
    published from is private, also tick `repo`.
 2. Export it in your shell:
    ```bash
-   export GITHUB_TOKEN=ghp_your_classic_token
+   export NODE_AUTH_TOKEN=ghp_your_classic_token
    ```
    The repo's `.npmrc` reads this env var — the token is never committed.
 
