@@ -6,7 +6,6 @@ import {
   Steps,
   Gallery,
   Faq,
-  ContactSection,
   CtaBanner,
 } from '@aagf470/ui'
 
@@ -17,14 +16,14 @@ import {
 // PLACEHOLDERS to swap before launch:
 //   • BRAND — legal name is "FencePatrol"; final brand/domain still TBD.
 //   • PHONE — (346) 332-6885 stands in for the Google Voice number.
-//   • EMAIL — placeholder address.
 //   • public/img/*.svg — placeholder art (also still carry the old wordmark).
+//
+// Phone-only business: no email, no contact form — every CTA is tap-to-call.
 // ---------------------------------------------------------------------------
 
 const BRAND = { a: 'Fence', b: 'Patrol', full: 'FencePatrol' } // ← placeholder name
 const PHONE_DISPLAY = '(346) 332-6885'
 const PHONE_TEL     = '+13463326885'
-const EMAIL         = 'hello@fencepatrol.com'
 const AREA          = 'all of Long Island, plus the Bronx, Manhattan, and northern New Jersey'
 
 // ── Phone icon for the nav CTA ───────────────────────────────────────────────
@@ -73,7 +72,7 @@ function Footer() {
             Call for a free estimate
           </span>
           <a href={`tel:${PHONE_TEL}`} className="fp-footer__phone">{PHONE_DISPLAY}</a>
-          <a href={`mailto:${EMAIL}`} style={{ color: 'rgba(255,255,255,0.62)', textDecoration: 'none' }}>{EMAIL}</a>
+          <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>We speak English &amp; Spanish · Find us on Yelp &amp; Angie's List</span>
         </div>
       </div>
       <div className="fp-footer__bottom">
@@ -200,23 +199,14 @@ export default function FencingPatrol() {
       </div>
 
       <div id="contact">
-        <ContactSection
-          eyebrow="Get in touch"
-          headline="Call for a free estimate"
-          subtext={`Tell us about your project and we'll get back to you fast. Serving ${AREA}. We speak English and Spanish — find us on Yelp and Angie's List, too.`}
-          email={EMAIL}
-          phone={PHONE_DISPLAY}
-          variant="alt"
+        <CtaBanner
+          eyebrow="Ready to start?"
+          headline="Call for a free estimate."
+          subtext="A phone call is the fastest way to reach us — free estimates, no obligation. Family-owned, insured, and local. We speak English and Spanish."
+          cta={{ label: `Call ${PHONE_DISPLAY}`, href: `tel:${PHONE_TEL}`, variant: 'solid' }}
+          variant="accent"
         />
       </div>
-
-      <CtaBanner
-        eyebrow="Ready to start?"
-        headline="Let's get your project moving."
-        subtext="Call for a free, no-obligation estimate. Family-owned, fully insured, and local."
-        cta={{ label: `Call ${PHONE_DISPLAY}`, href: `tel:${PHONE_TEL}`, variant: 'solid' }}
-        variant="accent"
-      />
 
       <Footer />
     </div>
