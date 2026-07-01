@@ -6,9 +6,9 @@
 
   /* ── BACKGROUNDS ───────────────────────────────────────────────────────── */
 
-  --color-bg:           #ffffff;
-  --color-surface:      #f6f3f0;   /* warm light gray panels */
-  --color-surface-high: #ece7e2;
+  --color-bg:           #faf6f0;   /* warm cream — softer than pure white */
+  --color-surface:      #f2e8d9;   /* warm sand panels (Long Island coast) */
+  --color-surface-high: #ead9c4;   /* deeper sand */
 
   /* ── TEXT (near-black) ─────────────────────────────────────────────────── */
 
@@ -27,9 +27,9 @@
 
   /* ── BORDERS ───────────────────────────────────────────────────────────── */
 
-  --color-border-sub:   #ece7e1;
-  --color-border-low:   #e1dad2;
-  --color-border-mid:   #cbc2b9;
+  --color-border-sub:   #ece0cf;
+  --color-border-low:   #e2d3bd;
+  --color-border-mid:   #d0bfa4;
 
   /* ── SHADOWS ───────────────────────────────────────────────────────────── */
 

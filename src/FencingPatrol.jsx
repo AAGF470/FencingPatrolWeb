@@ -34,6 +34,35 @@ const PhoneIcon = () => (
   </svg>
 )
 
+// ── Long Island line-art (lighthouse + waves) ──────────────────────────────
+const LongIslandArt = () => (
+  <svg className="fp-li__svg" viewBox="0 0 160 224" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Long Island lighthouse">
+    {/* light beams */}
+    <path d="M80 46 L2 14 L2 40 Z" fill="#e0600f" opacity="0.13" />
+    <path d="M80 46 L158 14 L158 40 Z" fill="#e0600f" opacity="0.13" />
+    {/* roof + finial */}
+    <circle cx="80" cy="18" r="3.5" fill="#241f1b" />
+    <path d="M60 42 L80 22 L100 42 Z" fill="#241f1b" />
+    {/* lantern room */}
+    <rect x="66" y="42" width="28" height="22" fill="#faf3e8" stroke="#241f1b" strokeWidth="3" />
+    <rect x="70" y="46" width="20" height="14" fill="#e0600f" />
+    {/* gallery platform */}
+    <rect x="55" y="64" width="50" height="9" fill="#241f1b" />
+    {/* tower */}
+    <path d="M63 73 L97 73 L108 186 L52 186 Z" fill="#faf3e8" stroke="#241f1b" strokeWidth="3" strokeLinejoin="round" />
+    {/* stripes */}
+    <path d="M65 96 L95 96 L97 118 L63 118 Z" fill="#e0600f" />
+    <path d="M60.5 146 L99.5 146 L102 168 L58 168 Z" fill="#e0600f" />
+    {/* rock base */}
+    <path d="M28 186 Q80 170 132 186 L132 200 L28 200 Z" fill="#241f1b" opacity="0.92" />
+    {/* waves */}
+    <path d="M6 200 q12 -8 24 0 t24 0 t24 0 t24 0 t24 0 t24 0" stroke="#e0600f" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.85" />
+    <path d="M0 212 q12 -8 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" stroke="#e0600f" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.5" />
+  </svg>
+)
+
+const AREAS = ['Nassau', 'Suffolk', 'Bronx', 'Manhattan', 'Northern NJ']
+
 // ── Nav ──────────────────────────────────────────────────────────────────────
 function Nav() {
   return (
@@ -157,6 +186,26 @@ export default function FencingPatrol() {
         columns={4}
         variant="default"
       />
+
+      {/* Proudly Long Island */}
+      <section className="fp-li">
+        <div className="fp-li__inner">
+          <div className="fp-li__art"><LongIslandArt /></div>
+          <div className="fp-li__copy">
+            <p className="fp-li__eyebrow">Proudly Long Island</p>
+            <h2 className="fp-li__title">Local to the Island — and the whole area</h2>
+            <p className="fp-li__body">
+              Born and based on Long Island. We know the neighborhoods, the housing stock,
+              and what the salt air and Nor'easters do to a roof or a fence. From the Island
+              out to the city and northern New Jersey — close enough to show up, small enough
+              to care.
+            </p>
+            <ul className="fp-li__areas">
+              {AREAS.map(a => <li key={a}>{a}</li>)}
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <ImageText
         eyebrow="About"
